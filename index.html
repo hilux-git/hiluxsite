@@ -1,33 +1,147 @@
 <DOCTYPE html>
-<head>
 <html>
-<body bgcolor="black">
-
-<style>
+    <head></head>
+<body bgcolor="black" onload="hiluxTime()">
+    <style>
         h1{
             color: white
+            
         }
-    p{
+        .small{
+            color: white;
+            line-height: .3em;
+            
+        }
+        p{
             color: white;
             letter-spacing: 2px;
             line-height: 0em;
         }
-</style>
+        a{
+            letter-spacing: 2px;
+        }
+        .topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+    </style>
+        
+<h1 class="small">hiluxsite.ml</h1>
 
+   
+<div id="firstHalf" style="display:block;">
     
-    <h1>hiluxsite.ml</h1>    
-    <p>i am deciding, the people need to know...</p>
+        
+<p>my storage</p>
+    
+    
+    
+    <input type="text" id="pass1" name="pass1">
     <br>
-    <p>check back soon...</p>
+    <input type="text" id="pass2" name="pass2">
+    <br>
+    <button onclick="hiluxEnter()"><a>enter</a></button>
+    <p id="no"></p>
+    
+<script>
+function hiluxNo(){
+document.getElementById("no").innerHTML = "no";
+        }
+</script>
+   
     
     
-    
-    
-    
-    
-    
-</body>
-</html>
-</head>
+<script>  
+function hiluxEnter(){
+var hilux = document.getElementById('pass1').value;
+var hilux2 = document.getElementById('pass2').value;
 
-</DOCTYPE>
+    
+
+    
+    if(hilux == "Hilux" && hilux2 == "Storage"){
+        
+    var top = document.getElementById("firstHalf");
+    if(top.style.display = "block"){
+        top.style.display = "none";
+        accessGranted();
+    }//div display if statement bracket
+    
+    
+    }else{
+      hiluxNo();
+}//else bracket
+}//function bracket
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//hiluxtime   
+function hiluxTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(hiluxTime, 500);
+}//function bracket
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}//function bracket    
+    
+</script>
+    </div>    
+<p id="txt" class="topright"></p>
+  
+    
+<script>
+    function accessGranted(){
+        document.getElementById("imageBackground").innerHTML = "body{ background-image: url('untitled.png'); background-size: cover; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;}";
+        document.getElementById("fontTypes").innerHTML = "h1{ color: black;} .small{color: black; line-spacing: .03em;} p{color: black; letter-spacing: 2px; line-height: 0em;} a{ color: black; letter-spacing: 2px; line-height: 0em;}"
+        document.getElementById("welcomeTag").innerHTML = "welcome";
+        document.getElementById("pleaseWait").innerHTML = "wait...";
+    setTimeout(mainFunction, 4000);
+        
+}//function bracket
+    
+function mainFunction(){
+    document.getElementById("pleaseWait").innerHTML = "there you go:";
+    
+    var buttonDiv = document.getElementById("buttonDiv");
+    
+    if(buttonDiv.style.display == "none"){
+        buttonDiv.style.display = "block"
+    }//buttonDiv if statement bracket
+    
+}//funtion bracket
+    
+    
+</script>
+    <style id="fontTypes"></style>
+    <style id=imageBackground></style>
+<p id="welcomeTag"></p>
+<p id="pleaseWait"></p>
+
+<br>
+
+<div id="buttonDiv" style="display:none">
+    <button><p>hello</p></button>
+</div>
+
+
+
+
+</body>  
+</html>
