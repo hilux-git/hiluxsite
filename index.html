@@ -2,6 +2,8 @@
 <html>
     <head></head>
 <body bgcolor="black" onload="hiluxTime()">
+<script>var alphHigh = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];</script>
+
     <style>
         h1{
             color: white
@@ -27,7 +29,7 @@
   font-size: 18px;
     </style>
         
-<h1 class="small">hiluxsite.ml</h1>
+<h1 class="small" onclick="location.reload()">hiluxsite.ml</h1>
 
    
 <div id="firstHalf" style="display:block;">
@@ -56,12 +58,11 @@ document.getElementById("no").innerHTML = "no";
 function hiluxEnter(){
 var hilux = document.getElementById('pass1').value;
 var hilux2 = document.getElementById('pass2').value;
-var scriptTerms = ["admin", "Hilux", "login", "brute", "Admin", "Force", "force", "storage", "Storage", "password", "Password", "array", "Array", "swipe", "oneLog"];
+var alphLow = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+   
 
     
-
-    
-    if(hilux == scriptTerms[0] && hilux2 == scriptTerms[14]){  
+    if(hilux == buttonDiv.style.display && hilux2 == alphLow[11] + alphLow[14] + alphLow[6] + alphHigh[15] + alphHigh[0] + alphHigh[18] + alphHigh[18]){  
     var top = document.getElementById("firstHalf");
     if(top.style.display = "block"){
         top.style.display = "none";
