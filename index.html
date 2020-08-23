@@ -2,7 +2,15 @@
 <html>
     <head></head>
 <body bgcolor="black" onload="hiluxTime()">
-<script>var alphHigh = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];</script>
+<script>var alphHigh = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    
+var alphLow = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    
+var hiluxUno
+var hiluxDos
+hiluxUno = alphHigh[0] + alphLow[3] + alphLow[12] + alphLow[8] + alphLow[13];
+hiluxDos = alphHigh[2] + alphLow[7] + alphLow[0] + alphLow[17] + alphHigh[15] + alphLow[0] + alphLow[18] + alphLow[18];
+</script>
 
     <style>
         h1{
@@ -45,29 +53,42 @@
     <br>
     <button onclick="hiluxEnter()"><a>enter</a></button>
     <p id="no"></p>
+    <p id="finalNo"></p>
+    <p id="yes" onclick="boxPop()"></p>
+    <div id="boxContainer" style="display:none">
+    <input type="text" id="pass3" name="pass3">
+    <br>
+    <input type="text" id="pass4" name="pass4">
+    <br>
+    <button onclick="hiluxFinalEntry()"><a>enter</a></button>
+    </div>
+    
+    
+    
     
 <script>
 function hiluxNo(){
 document.getElementById("no").innerHTML = "no";
+document.getElementById("yes").innerHTML = "";
         }
-</script>
-   
-    
-    
-<script>  
+  
+function hiluxYes(){ 
+document.getElementById("yes").innerHTML = "correct"; 
+document.getElementById("no").innerHTML = "";
+document.getElementById("pass1").value = "";
+document.getElementById("pass2").value = "";
+document.getElementById("finalNo").innerHTML = "";
+}    
+  
 function hiluxEnter(){
 var hilux = document.getElementById('pass1').value;
 var hilux2 = document.getElementById('pass2').value;
-var alphLow = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
    
 
     
-    if(hilux == buttonDiv.style.display && hilux2 == alphLow[11] + alphLow[14] + alphLow[6] + alphHigh[15] + alphHigh[0] + alphHigh[18] + alphHigh[18]){  
-    var top = document.getElementById("firstHalf");
-    if(top.style.display = "block"){
-        top.style.display = "none";
-        accessGranted();
-    }//div display if statement bracket
+    if(hilux == hiluxUno && hilux2 == hiluxDos){  
+    hiluxYes();
+    
     
     
     }else{
@@ -102,6 +123,62 @@ function checkTime(i) {
     </div>    
 <p id="txt" class="topright"></p>
   
+ 
+<!--here-->
+ 
+    
+<script>
+function boxPop(){
+var boxDiv = document.getElementById("boxContainer");  
+
+    if(boxDiv.style.display == "none"){
+        boxDiv.style.display = "block"
+    }//boxDiv if statement bracket
+}
+    
+function hiluxFinalEntry(){
+    var hilux3 = document.getElementById('pass3').value;
+    var hilux4 = document.getElementById('pass4').value;  
+    
+    if(hilux3 == buttonDiv.style.display + alphHigh[17] + alphLow[4] + alphHigh[11] + alphLow[14] + alphLow[6] && hilux4 == alphHigh[20] + alphLow[18] + alphLow[4] + alphLow[17] + alphHigh[11] + alphLow[14] + alphLow[6] + alphLow[8] + alphLow[13] + "!"){
+    var top = document.getElementById("firstHalf");
+    if(top.style.display = "block"){
+    top.style.display = "none";
+    accessGranted();
+}
+}
+    if(hilux3 != buttonDiv.style.display + alphHigh[17] + alphLow[4] + alphHigh[11] + alphLow[14] + alphLow[6] && hilux4 != alphHigh[20] + alphLow[18] + alphLow[4] + alphLow[17] + alphHigh[11] + alphLow[14] + alphLow[6] + alphLow[8] + alphLow[13] + "!"){
+    hiluxFinalNo();
+    }
+}
+    
+function hiluxFinalNo(){
+    document.getElementById('pass3').value = "";
+    document.getElementById('pass4').value = "";
+    document.getElementById("finalNo").innerHTML = "no";
+    document.getElementById("yes").innerHTML = "";
+    boxUnPop();
+        } 
+    
+function boxUnPop(){
+var boxDiv = document.getElementById("boxContainer");  
+
+    if(boxDiv.style.display == "block"){
+        boxDiv.style.display = "none"
+    }//boxDiv if statement bracket
+    
+    hiluxUno = hiluxUno + "1"
+    hiluxDos = hiluxDos + "2"
+}
+    
+var hilux3Two;
+hilux3Two = alphHigh[17] + alphLow[4] + alphHigh[11] + alphLow[14] + alphLow[6];
+var hilux4Two;
+hilux4Two = alphHigh[20] + alphLow[18] +alphLow[4] + alphLow[17] + alphHigh[11] + alphLow[14] + alphLow[6] + alphLow[8] + alphLow[13];
+
+</script>
+
+<!--HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX-->     
     
 <script>
     function accessGranted(){
@@ -109,7 +186,9 @@ function checkTime(i) {
         document.getElementById("fontTypes").innerHTML = "h1{ color: black;} .small{color: black; line-spacing: .03em;} p{color: black; letter-spacing: 2px; line-height: 0em;} a{ color: black; letter-spacing: 2px; line-height: 0em;}"
         document.getElementById("welcomeTag").innerHTML = "welcome";
         document.getElementById("pleaseWait").innerHTML = "wait...";
-    setTimeout(mainFunction, 4000);
+        setTimeout(mainFunction, 4000);
+        
+        
         
 }//function bracket
     
@@ -137,8 +216,10 @@ function mainFunction(){
     <button><p>hello</p></button>
 </div>
 
-
-
-
+    
+<!--HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX-->
+    
+    
+    
 </body>  
 </html>
