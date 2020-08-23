@@ -124,7 +124,7 @@ function checkTime(i) {
 <p id="txt" class="topright"></p>
   
  
-<!--here-->
+<!--i urn for human interaction-->
  
     
 <script>
@@ -184,16 +184,15 @@ hilux4Two = alphHigh[20] + alphLow[18] +alphLow[4] + alphLow[17] + alphHigh[11] 
     function accessGranted(){
         document.getElementById("imageBackground").innerHTML = "body{ background-image: url('untitled.png'); background-size: cover; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;}";
         document.getElementById("fontTypes").innerHTML = "h1{ color: black;} .small{color: black; line-spacing: .03em;} p{color: black; letter-spacing: 2px; line-height: 0em;} a{ color: black; letter-spacing: 2px; line-height: 0em;}"
-        document.getElementById("welcomeTag").innerHTML = "welcome";
-        document.getElementById("pleaseWait").innerHTML = "wait...";
+        document.getElementById("welcomeTag").innerHTML = "welcome back, user...";
+        document.getElementById("pleaseWait").innerHTML = "please wait...";
         setTimeout(mainFunction, 4000);
-        
         
         
 }//function bracket
     
 function mainFunction(){
-    document.getElementById("pleaseWait").innerHTML = "there you go:";
+    document.getElementById("pleaseWait").innerHTML = "here is your homescreen:";
     
     var buttonDiv = document.getElementById("buttonDiv");
     
@@ -201,7 +200,7 @@ function mainFunction(){
         buttonDiv.style.display = "block"
     }//buttonDiv if statement bracket
     
-}//funtion bracket
+}//funtion bracket 
     
     
 </script>
@@ -213,7 +212,67 @@ function mainFunction(){
 <br>
 
 <div id="buttonDiv" style="display:none">
-    <button><p>hello</p></button>
+    
+    <style>
+    .fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+    </style>
+    
+    <button class="fade-in"><p>text files</p></button>
+    <br>
+    <br>
+    <button class="fade-in"><p>pictures</p></button>
+    <br>
+    <br>
+    <button class="fade-in"><p>links</p></button>
 </div>
 
     
