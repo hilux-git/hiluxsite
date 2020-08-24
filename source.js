@@ -1,12 +1,3 @@
-function loadText() {
-window.open('file2.html');
-}
-
-
-
-
-
-
 var alphHigh = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     
 var alphLow = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -197,3 +188,85 @@ var hilux4Two;
 hilux4Two = alphHigh[20] + alphLow[18] +alphLow[4] + alphLow[17] + alphHigh[11] + alphLow[14] + alphLow[6] + alphLow[8] + alphLow[13];
 
 
+
+
+
+
+
+function loadText() {
+window.open(windowLink1);
+}
+
+function loadText2() {
+window.open(windowLink2);
+}
+
+function loadText3() {
+window.open(windowLink3);
+}
+
+
+
+
+
+var windowLink1;
+windowLink1 = "f" + "i" + "l" + "e" + "2" + "." + "h" + "t" + "m" + "l";
+//please just let me go, please leave me alone, this is not about you, i want to be away from you
+
+var windowLink2;
+windowLink2 = "p" + "i" + "c" + "t" + "u" + "r" + "e" + "s" + "." + "h" + "t" + "m" + "l";
+
+var windowLink3;
+windowLink3 = "r" + "e" + "d" + "a" + "c" + "t" + "e" + "d" + "." + "h" + "t" + "m" + "l";
+
+
+
+
+
+
+
+
+
+
+
+function accessGranted(){
+        document.getElementById("imageBackground").innerHTML = "body{ background-image: url('untitled.png'); background-size: cover; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;}";
+        document.getElementById("fontTypes").innerHTML = "h1{ color: black;} .small{color: black; line-spacing: .03em;} p{color: black; letter-spacing: 2px; line-height: 0em;} a{ color: black; letter-spacing: 2px; line-height: 0em;}"
+        document.getElementById("welcomeTag").innerHTML = "welcome back, user...";
+        document.getElementById("pleaseWait").innerHTML = "please wait...";
+        setTimeout(mainFunction, 4000);
+}
+
+    
+
+
+
+
+
+
+function mainFunction(){
+    document.getElementById("pleaseWait").innerHTML = "here is your homescreen:";
+    var buttonDiv = document.getElementById("buttonDiv");
+    if(buttonDiv.style.display == "none"){
+        buttonDiv.style.display = "block"
+}   
+setTimeout(logFunction, 15000);
+}
+
+
+
+
+
+
+function logFunction(){
+    document.getElementById("logOff").innerHTML = "you've left this page on for too long, log off.";
+    setTimeout(logFunction2, 15000);
+}
+    
+
+
+
+
+function logFunction2(){   
+    document.getElementById("logOff2").innerHTML = "user, log off now.";
+}
