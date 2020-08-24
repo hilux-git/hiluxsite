@@ -73,31 +73,6 @@
     
 
 <!--HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX HILUX-->     
-    
-<script>
-    function accessGranted(){
-        document.getElementById("imageBackground").innerHTML = "body{ background-image: url('untitled.png'); background-size: cover; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;}";
-        document.getElementById("fontTypes").innerHTML = "h1{ color: black;} .small{color: black; line-spacing: .03em;} p{color: black; letter-spacing: 2px; line-height: 0em;} a{ color: black; letter-spacing: 2px; line-height: 0em;}"
-        document.getElementById("welcomeTag").innerHTML = "welcome back, user...";
-        document.getElementById("pleaseWait").innerHTML = "please wait...";
-        setTimeout(mainFunction, 4000);
-        
-        
-}//function bracket
-    
-function mainFunction(){
-    document.getElementById("pleaseWait").innerHTML = "here is your homescreen:";
-    
-    var buttonDiv = document.getElementById("buttonDiv");
-    
-    if(buttonDiv.style.display == "none"){
-        buttonDiv.style.display = "block"
-    }//buttonDiv if statement bracket
-    
-}//funtion bracket 
-    
-    
-</script>
 <style id="fontTypes"></style>
 <style id=imageBackground></style>
 <p id="welcomeTag"></p>
@@ -163,10 +138,15 @@ function mainFunction(){
     <button class="fade-in" onclick="loadText();"><p>text files</p></button>
     <br>
     <br>
-    <button class="fade-in"><p>pictures</p></button>
+    <button class="fade-in" onclick="loadText2()"><p>pictures</p></button>
     <br>
     <br>
-    <button class="fade-in"><p>links</p></button>
+    <button class="fade-in" onclick="loadText3();"><p>redacted</p></button>
+    <br>
+    <br>
+    <p id="logOff"></p>
+    <br>
+    <p id="logOff2"></p>
 </div>
 
     
