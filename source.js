@@ -259,14 +259,6 @@ setTimeout(logFunction, 15000);
 
 
 function logFunction(){
-    document.getElementById("logOff").innerHTML = "you've left this page on for too long, log off.";
-    setTimeout(logFunction2, 15000);
+    document.getElementById("logOff").innerHTML = "you've left this page open for a little, don't forget to close it. click here to log off.";
 }
     
-
-
-
-
-function logFunction2(){   
-    document.getElementById("logOff2").innerHTML = "user, log off now.";
-}
