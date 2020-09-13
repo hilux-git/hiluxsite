@@ -23,6 +23,8 @@ function theAccident(){
     var vic = document.getElementById("forVictor");
     if(vic.style.display == "none"){
         vic.style.display = "block"
+}else{
+        vic.style.display = "none"  
 }}
 
 var arrayText
