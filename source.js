@@ -261,4 +261,6 @@ setTimeout(logFunction, 15000);
 function logFunction(){
     document.getElementById("logOff").innerHTML = "you've left this page open for a little, don't forget to close it. click here to log off.";
 }
+
+
     
