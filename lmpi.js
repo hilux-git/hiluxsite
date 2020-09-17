@@ -84,3 +84,7 @@ var decider = Math.floor(Math.random() * 9) + 1;
 }}
 
 //i cut my finger off. no no noono i didnt no i didnt stop i did not, its right here
+
+function forward(){
+    window.open("service.html", "_self");
+}
