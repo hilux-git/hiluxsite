@@ -174,6 +174,3 @@ function content5(){
  alert('DO NOT CONTINUE TO THIS PAGE. RELOAD THE PAGE NOW, DO NOT PRESS OK.')
 document.getElementById("contentDiv").innerHTML ="<img src='https://vignette.wikia.nocookie.net/creepypasta/images/f/ff/Mereana_Mordegard_Glesgorv/revision/latest/scale-to-width-down/340?cb=20130603233425' <br> <h3> PLEASE LEAVE I AM MOURNING, THIS IS MY BUSINESS NOT YOURS</h3>"
 }
-
-
-//upload dreamman.html, whatreallyhappened.mp4, words.js, hahavictorlookatthis.mp4, and this page. Also update pictures.html
